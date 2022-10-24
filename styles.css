@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.title-blue{
+    color: #1E0E62;
+}
+
+a{
+    text-decoration: none;
+}
+
+.info{
+    color: rgba(21, 20, 57, 0.4);
+}
+/* HEADER */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 15px;
+}
+
+.header__title{
+    font-size: 1.2rem;
+}
+
+.header__email{
+    border: 1px solid #EBEAED;
+    border-radius: 100px;
+    padding: 5px 10px;
+    color: #1E0E62;
+}
+
+
+/* BIO */
+
+.bio{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+    background-color: #F1F1F1;
+    height: 80vh;
+    box-shadow: 0px -1px 0px 0px #9999A7 inset;
+}
+.bio__info{
+    font-size: 1rem;
+}
+
+.bio__title{
+    color: #1E0E62;
+}
+
+.bio__img{
+    width: 200px;
+    border-radius: 20px;
+}
+
+/* SKILLS */
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    background-color: #F1F1F1;
+    padding-left: 20px;
+}
+.skills__items{
+    padding-left: 10px;
+}
+
+/* EXPERIENCIA */
+
+.exp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.exp__button{
+    background-color: #25DAC5;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 25px;
+}
+
+.exp__items{
+    padding-left: 20px;
+}
+
+.exp__img{
+    width: 80vw;
+    border-radius: 15px;
+}
+
+.exp__info{
+    padding-right: 20px;
+}
+
+/* FOOTER */
+
+.footer{
+    height: 40vh;
+    background-color: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__info{
+    text-align: center;
+    color: #1E0E62;
+    font-weight: bold;
+    padding-top: 35px;
+}
+
+.footer__email{
+    color: #482BE7;
+    font-weight: bold;
+}
+
+.footer__redes{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.bi{
+    color: #9999A7;;
+}
+
+
