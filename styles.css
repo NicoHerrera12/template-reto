@@ -37,6 +37,15 @@ a{
 }
 
 
+/* HEADER-DESKTOP */
+
+@media (min-width: 768px){
+    .header{
+        padding: 20px 40px;
+    }
+}
+
+
 /* BIO */
 
 .bio{
@@ -45,22 +54,53 @@ a{
     justify-content: space-around;
     padding-left: 20px;
     background-color: #F1F1F1;
-    height: 80vh;
+    height: auto;
     box-shadow: 0px -1px 0px 0px #9999A7 inset;
 }
 .bio__info{
     font-size: 1rem;
+    grid-area: bioinfo;
+    grid-column: 2/3;
 }
 
 .bio__title{
     color: #1E0E62;
+    font-size: 3rem;
+    grid-area: biotitle;
+    grid-column: 2/3;
 }
 
 .bio__img{
     width: 200px;
+    padding-bottom: 10px;
     border-radius: 20px;
+    grid-area: bioimg;
+    grid-column: 4/5;
 }
 
+/* BIO-DESKTOP */
+
+@media(min-width:576px){
+    .bio{
+        display: grid;
+        grid-template-columns: 10% 40% 10% 40%;
+        grid-template-areas:
+        "biotitle bioimg"
+        "bioinfo bioimg"
+        ;
+        align-content: center;
+        box-shadow: none;
+    }
+    .bio__title{
+        align-self: flex-end;
+    }
+}
+
+@media(min-width:768px){
+    .bio__img{
+        width: 250px;
+    }
+}
 /* SKILLS */
 
 .skills{
@@ -74,6 +114,49 @@ a{
 .skills__items{
     padding-left: 10px;
 }
+.skills__title{
+    font-size: 2.2rem;
+    grid-area: title;
+    grid-column: 1/4;
+}
+.skills__subtitle{
+    font-size: 1.5rem;
+}
+.skills__items-uno{
+    grid-area: uno;
+}
+.skills__items-dos{
+    grid-area: dos;
+}
+.skills__items-tres{
+    grid-area: tres;
+}
+
+/* SKILLS-DESKTOP */
+
+@media(min-width: 576px){
+    .skills{
+        display: grid;
+        height: 50vh;
+        grid-template-columns: 33.333% 33.333% 33.333%;
+        grid-template-rows: min-content;
+        grid-template-areas:
+        "title title title"
+        "uno dos tres"
+        ;
+    }
+    .skills__items{
+        padding-left: 0;
+        align-self: center;
+    }
+    .skills__title{
+        padding-top: 30px;
+        text-align: center;
+    }
+    .skills__subtitle{
+        text-align: center;
+    }
+}
 
 /* EXPERIENCIA */
 
@@ -84,6 +167,13 @@ a{
     align-items: center;
     height: 100vh;
 }
+.exp__title{
+    font-size: 2.2rem;
+}
+.exp__items--media{
+    display: none;
+}
+
 .exp__button{
     background-color: #25DAC5;
     color: #fff;
@@ -94,15 +184,69 @@ a{
 
 .exp__items{
     padding-left: 20px;
+    text-align: center;
 }
 
 .exp__img{
-    width: 80vw;
+    width: 300px;
     border-radius: 15px;
 }
 
 .exp__info{
     padding-right: 20px;
+}
+
+/* EXP DESKTOP */
+
+@media(min-width:768px){
+    .exp{
+        height: auto;
+        display: grid;
+        grid-template-columns: 33.333% 33.333% 33.333%;
+        grid-template-areas: 
+        "title title title"
+        "button button button"
+        "uno dos tres"
+        "cuatro cinco seis"
+        ;
+    }
+    .exp__img{
+        width: 230px;
+    }
+    .exp__items--media{
+        display: block;
+    }
+    .exp__items{
+        padding: 10px 0;
+    }
+    .exp__items-uno{
+        grid-area: uno;
+    }
+    .exp__items-dos{
+        grid-area: dos;
+    }
+    .exp__items-tres{
+        grid-area: tres;
+    }
+    .exp__items-cuatro{
+        grid-area: cuatro;
+    }
+    .exp__items-cinco{
+        grid-area: cinco;
+    }
+    .exp__items-seis{
+        grid-area: seis;
+    }
+    .exp__title{
+        text-align: center;
+        grid-area: title;
+    }
+    .exp__button{
+        grid-area: button;
+        padding: 5px 0;
+        text-align: center;
+        grid-column: 2/3;
+    }
 }
 
 /* FOOTER */
